@@ -1,0 +1,165 @@
+/* ── Upside-down hero band ────────────────────────────────────────────────
+   A vertically-flipped copy of the home hero. Its dark-olive top sits behind
+   the floating gold header (seamless blend), the bright sky in the middle
+   backs the italic intro copy, and the dark base meets the grid below. */
+.portfolio-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* taller band so the bright sky/water runs longer down the page, matching
+     the live site */
+  min-height: clamp(500px, 40vw, 640px);
+  /* dark fallback behind the full-bleed flipped photo */
+  background: hsl(56 7% 8%);
+  padding:
+    calc(var(--header-h) + clamp(2.5rem, 6vw, 5rem))
+    0
+    clamp(1.5rem, 3.5vw, 3rem);
+}
+/* the flipped photo fills the whole band and runs up behind the floating gold
+   header — so the olive "band" is the photo itself rather than a tall gradient
+   (no seam, no long feather) */
+.portfolio-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+/* short dark-olive scrim only behind the header, keeping the gold logo and nav
+   legible over the photo; it fades out quickly so the bright band stays long */
+.portfolio-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: calc(var(--header-h) + clamp(2rem, 5vw, 4.5rem));
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    hsl(68 17% 31% / 0.82) 0%,
+    hsl(68 16% 30% / 0.55) 50%,
+    hsl(68 16% 30% / 0.18) 80%,
+    hsl(68 16% 30% / 0) 100%
+  );
+  pointer-events: none;
+}
+/* light warm wash to lift the grade to the live site's brighter register */
+.portfolio-hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: hsl(46 28% 89% / 0.15);
+}
+.portfolio-hero__media picture,
+.portfolio-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  /* flip the hero upside down; keep the photo at full brightness like the
+     live site (a gentle saturation lift keeps the sky luminous) */
+  transform: scaleY(-1);
+  filter: saturate(1.02) brightness(1.04);
+}
+/* let the intro span wider than the default container so the long sentences
+   wrap across the full band rather than into a narrow column */
+.portfolio-hero .container { max-width: min(1340px, 92vw); }
+.portfolio-hero__intro {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin-inline: auto;
+  text-align: center;
+  color: var(--text);
+  /* sit the copy lower, over the bright water band */
+  transform: translateY(3.75rem);
+}
+.portfolio-hero__intro p {
+  margin: 0 0 1.1rem;
+  font-size:  clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.55;
+  font-style: italic;
+}
+.portfolio-hero__intro p:last-child { margin-bottom: 0; }
+
+/* grid on dark (live "black" theme section) */
+.portfolio-grid {
+  background: var(--dark);
+  padding-top: clamp(2.5rem, 6vw, 5rem);
+}
+
+/* widen the grid to the live site's poster width: it scales with the viewport
+   (92vw, cards ~4% from the edge) and only caps at ~1900px, so on wide screens
+   the posters grow much larger instead of staying capped */
+.portfolio-grid .container {
+  max-width: min(1900px, 92vw);
+  padding-inline: 0;
+}
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+/* ── Card with hover overlay (matches grid-overlay "show text after hover") ── */
+.pf-card { display: block; }
+.pf-card__media {
+  position: relative;
+  /* 2:3 movie-poster ratio, matching the live site's taller cards */
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: var(--bg-deep);
+}
+.pf-card__media picture,
+.pf-card__media img,
+.pf-card__placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pf-card__media img {
+  transition: transform 0.7s var(--ease), filter 0.5s var(--ease);
+  transform: scale(1.001);
+}
+.pf-card:hover .pf-card__media img {
+  transform: scale(1.06);
+  filter: brightness(0.7);
+}
+
+.pf-card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  background: hsl(60 3% 12% / 0);
+  transition: background 0.5s var(--ease);
+}
+.pf-card:hover .pf-card__overlay { background: hsl(60 3% 12% / 0.28); }
+
+.pf-card__title {
+  font-family: var(--font-head);
+  color: var(--bg);
+  /* match the live site's fluid hover-title size (~37px @1440 → ~44px @1920,
+     capping near 46px on very wide screens) */
+  font-size: clamp(1.75rem, 1rem + 1.44vw, 2.9rem);
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.45s var(--ease), transform 0.45s var(--ease);
+}
+.pf-card:hover .pf-card__title,
+.pf-card:focus-visible .pf-card__title { opacity: 1; transform: none; }
+
+@media (max-width: 1100px) { .portfolio__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+  .portfolio__grid { grid-template-columns: 1fr; }
+  /* on touch, always show the title since there's no hover */
+  .pf-card__title { opacity: 1; transform: none; }
+  .pf-card__overlay { align-items: flex-end; background: linear-gradient(to top, hsl(60 3% 12% / 0.55), transparent 55%); }
+}

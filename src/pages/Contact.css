@@ -1,0 +1,113 @@
+.contact {
+  position: relative;
+  background: var(--dark);
+  color: var(--cream);
+  padding-top: calc(var(--header-h) + clamp(2.5rem, 6vw, 5rem));
+  padding-bottom: clamp(6rem, 12vw, 10rem);
+  overflow: hidden;
+}
+
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__heading {
+  color: var(--cream);
+  text-align: center;
+  font-size: clamp(3.25rem, 9vw, 5.5rem);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.contact__form {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 880px;
+}
+.contact__form label { display: grid; gap: 0.5rem; }
+.contact__form span {
+  font-size: 0.95rem;
+  color: var(--cream);
+}
+.contact__form span em {
+  font-style: normal;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.contact__name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.contact__name legend {
+  grid-column: 1 / -1;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--cream);
+}
+
+/* gold-filled inputs with asymmetric rounded corners (matches live) */
+.contact__form input,
+.contact__form textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--accent-dark);
+  border: 2px solid transparent;
+  border-radius: 15px 0;
+  padding: 0.85rem 1rem;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.contact__form input::placeholder,
+.contact__form textarea::placeholder { color: hsl(60 6% 18% / 0.6); }
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  transform: scale(1.01);
+  box-shadow: 0 0 0 3px hsl(44 81% 52% / 0.35);
+}
+.contact__form textarea { resize: vertical; }
+
+/* underline-style submit button (matches live) */
+.contact__submit {
+  justify-self: start;
+  margin-top: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--cream);
+  padding: 0.4rem 1.5rem 0.6rem;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s var(--ease);
+}
+/* no motion on hover — just tint the label the same yellow as the input fields */
+.contact__submit:hover { color: var(--accent-dark); }
+
+/* curved divider into the yellow footer */
+.contact__divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  line-height: 0;
+}
+.contact__divider svg {
+  display: block;
+  width: 100%;
+  height: clamp(60px, 7vw, 110px);
+}
+
+@media (max-width: 520px) {
+  .contact__name { grid-template-columns: 1fr; }
+}

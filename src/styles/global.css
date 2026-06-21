@@ -1,0 +1,123 @@
+/* ── Design tokens (matched to the original Squarespace theme) ───────────── */
+:root {
+  /* warm palette pulled from the live site (exact Squarespace theme colors) */
+  --bg: rgb(234, 230, 221);                  /* cream (live "white" theme) */
+  --bg-deep: hsl(44, 18%, 84%);              /* slightly darker cream */
+  --text: rgb(45, 45, 42);                   /* warm near-black (live "black" theme) */
+  --text-soft: hsl(60, 3%, 30%);
+  --accent: rgb(201, 182, 131);              /* muted gold (live "bright" services band) */
+  --accent-dark: hsl(44, 81%, 52%);          /* saturated gold */
+  --accent-light: hsl(44.27, 74.1%, 72.75%);
+  --footer-bg: rgb(237, 210, 134);           /* yellow footer band (live "light" theme) */
+
+  /* dark page sections (About, Contact, Portfolio grid) reuse the same two
+     colors inverted: dark background + cream text */
+  --dark: var(--text);
+  --cream: var(--bg);
+
+  --font-head: "Young Serif", Georgia, serif;
+  --font-body: "Bitter", Georgia, serif;
+
+  --maxw: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --header-h: 76px;
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  line-height: 1.08;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* skip-to-content link: off-screen until focused */
+.skip-link {
+  position: absolute;
+  left: 0; top: 0;
+  z-index: 1000;
+  padding: 0.75rem 1.25rem;
+  background: var(--text);
+  color: var(--bg);
+  transform: translateY(-120%);
+  transition: transform 0.2s var(--ease);
+}
+.skip-link:focus { transform: translateY(0); }
+
+img { display: block; max-width: 100%; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { padding-block: clamp(4rem, 9vw, 8rem); }
+
+/* small caps eyebrow / labels */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+/* underline-style links like the original buttons */
+.link-underline {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-body);
+  letter-spacing: 0.04em;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 100%; height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+.link-underline:hover::after { transform: scaleX(1); }
+
+/* ── Scroll fade-in animation (global, fade style like the original) ─────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

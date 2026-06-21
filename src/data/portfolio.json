@@ -1,0 +1,289 @@
+[
+  {
+    "title": "100 Foot Wave",
+    "slug": "project-one-f5w4d-z9nem-s3jda-x8w73-2wm7x",
+    "image": "portfolio-project-one-f5w4d-z9nem-s3jda-x8w73-2wm7x.png",
+    "description": "100 Foot Wave is an HBO documentary series that follows big wave surfer Garrett McNamara and a global community of surfers chasing record-breaking waves in Nazaré, Portugal. The show blends high-stakes surf footage with deeply personal storytelling, capturing the obsession, risk, and emotional weight behind pushing the limits of the ocean.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "100 Foot Wave"
+  },
+  {
+    "title": "Songs from the Hole",
+    "slug": "songs-from-the-hole",
+    "image": "portfolio-songs-from-the-hole.png",
+    "description": "Songs from the Hole is a genre-defying Netflix documentary that blends nonfiction storytelling with a visual album, following incarcerated musician James “JJ’88” Jacobs as he processes trauma, guilt, and healing through music created while in prison. The film weaves together real-life narrative, lyrical journal entries, and imagined memories, creating an intimate and emotionally layered portrait of redemption and self-discovery.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Songs from the Hole"
+  },
+  {
+    "title": "Mr. McMahon",
+    "slug": "project-four-l3zw3-dk9py-xcmem-e2jgd-m6hye",
+    "image": "portfolio-project-four-l3zw3-dk9py-xcmem-e2jgd-m6hye.png",
+    "description": "Mr. McMahon is a Netflix documentary series that explores the life and legacy of Vince McMahon, the controversial architect behind WWE’s global empire. The series traces his rise from regional promoter to cultural force, unpacking the blurred lines between performance and reality, power and persona, and the lasting impact of his influence on sports entertainment.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Mr. McMahon"
+  },
+  {
+    "title": "Full Swing",
+    "slug": "project-two-ky966-n329z-nnx53-2grpr-jyrwg",
+    "image": "portfolio-project-two-ky966-n329z-nnx53-2grpr-jyrwg.png",
+    "description": "Full Swing is a Netflix documentary series that follows professional golfers through a high-stakes season on the PGA Tour, offering an intimate look at the pressure, discipline, and personal lives behind a traditionally reserved sport. Blending tournament coverage with behind-the-scenes access, the series reveals the emotional and psychological realities of competing at the highest level.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Full Swing"
+  },
+  {
+    "title": "Bill Russel: Legend",
+    "slug": "project-three-sng7y-jkgxx-kmlk5-64gk3-hjsn9-cmdw8",
+    "image": "portfolio-project-three-sng7y-jkgxx-kmlk5-64gk3-hjsn9-cmdw8.png",
+    "description": "Bill Russell: Legend is a Netflix documentary that honors the life and legacy of NBA icon Bill Russell—both as a record-breaking athlete and a pivotal figure in the civil rights movement. The film moves between his dominance on the court and his impact off it, painting a portrait of a man who reshaped not just a sport, but a culture.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Bill Russell: Legend"
+  },
+  {
+    "title": "Teenage Euthanasia",
+    "slug": "project-three-sng7y-jkgxx-kmlk5-64gk3-hjsn9-cmdw8-ekwfs",
+    "image": "portfolio-project-three-sng7y-jkgxx-kmlk5-64gk3-hjsn9-cmdw8-ekwfs.png",
+    "description": "Teenage Euthanasia is an Adult Swim animated series that blends dark comedy with surreal, offbeat storytelling, following a dysfunctional family running a funeral home in Florida. The show leans into chaotic humor, emotional absurdity, and a distinctly stylized tone that balances irreverence with unexpected moments of heart.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Teenage Euthanasia"
+  },
+  {
+    "title": "Unbanked",
+    "slug": "new-portfolio-item-6",
+    "image": "portfolio-new-portfolio-item-6.png",
+    "description": "Unbanked is a documentary that explores the lives of Americans living outside the traditional financial system, shedding light on the systemic barriers that make basic banking inaccessible for millions. Through personal stories and on-the-ground perspectives, the film examines how financial exclusion shapes everyday life and exposes the human impact behind an often invisible issue.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Unbanked"
+  },
+  {
+    "title": "Casey Anthony: Where the Truth Lies",
+    "slug": "project-three-sng7y-jkgxx-kmlk5-64gk3-hjsn9",
+    "image": "portfolio-project-three-sng7y-jkgxx-kmlk5-64gk3-hjsn9.png",
+    "description": "Casey Anthony: Where the Truth Lies is a Peacock documentary series that revisits one of the most polarizing criminal cases in recent history. For the first time on camera, Casey Anthony shares her version of events surrounding the death of her daughter, offering a deeply subjective perspective on a case that continues to divide public opinion.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Casey Anthony: Where the Truth Lies"
+  },
+  {
+    "title": "Whatever it Takes: Inside the ebay Scandal",
+    "slug": "whatever-it-takes",
+    "image": "portfolio-whatever-it-takes.png",
+    "description": "Whatever It Takes: Inside the eBay Scandal is a true-crime documentary that uncovers a shocking corporate harassment campaign, following a couple targeted by a coordinated cyberstalking operation tied to eBay employees. What begins as online intimidation escalates into real-world threats, exposing a disturbing abuse of power and the lengths a corporation was willing to go to silence criticism.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Whatever It Takes: Inside the eBay Scandal"
+  },
+  {
+    "title": "County Rescue",
+    "slug": "county-rescue",
+    "image": "portfolio-county-rescue.png",
+    "description": "County Rescue is a faith-driven drama series that follows a team of EMTs and paramedics as they navigate the high-pressure demands of emergency response work alongside their personal struggles and relationships. Centered on a group of trainees competing for a single position, the series blends life-or-death stakes with themes of purpose, resilience, and belief.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "County Rescue"
+  },
+  {
+    "title": "Suspicious Minds",
+    "slug": "county-rescue-2bw8z",
+    "image": "portfolio-county-rescue-2bw8z.png",
+    "description": "Suspicious Minds is an experimental short film that follows a fractured encounter at a surreal Halloween rave, where a public breakup spirals into an unexpected connection. Blending romance, memory, and dreamlike imagery, the film moves between emotional reality and abstraction, exploring how past experiences shape present perception.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Suspicious Minds"
+  },
+  {
+    "title": "The Way It Was: Paris restaurants in the 1970's",
+    "slug": "the-way-it-was-paris-restaurants-in-the-1970s",
+    "image": "portfolio-the-way-it-was-paris-restaurants-in-the-1970s.png",
+    "description": "The Way It Was: Paris Restaurants in the 1970s is a documentary that captures a vivid snapshot of Paris’s culinary world during a transformative era. Through observational footage and archival perspective, the film explores the culture, people, and evolving ecosystem of restaurants in 1970s Paris, offering a rare window into a moment of artistic and gastronomic history.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "The Way It Was: Paris Restaurants in the 1970s"
+  },
+  {
+    "title": "Year One: A Political Odyssey",
+    "slug": "year-one-a-political-odyssey",
+    "image": "portfolio-year-one-a-political-odyssey.png",
+    "description": "Year One: A Political Odyssey is a documentary that follows President Joe Biden’s first year in office, offering an inside look at the administration’s early challenges and decision-making. Through interviews and behind-the-scenes access to key figures, the film captures a pivotal moment in contemporary U.S. politics as it unfolds in real time.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Year One: A Political Odyssey"
+  },
+  {
+    "title": "Loopers",
+    "slug": "county-rescue-2bw8z-tl559-ffs93-7amlr",
+    "image": "portfolio-county-rescue-2bw8z-tl559-ffs93-7amlr.png",
+    "description": "Loopers is a comedy series about golf, money, and the hustle of the American caddy. When a teenage newcomer on a summer job starts getting booked more than the seasoned veterans—despite having no experience—it throws the entire caddy ecosystem into chaos. As the older caddies scramble to win back clients and protect their tips, the show explores competition, ego, and the absurd economics behind the game.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Loopers"
+  },
+  {
+    "title": "Portrait of a Young Criminal",
+    "slug": "portrait-of-a-young-criminal",
+    "image": "portfolio-portrait-of-a-young-criminal.png",
+    "description": "In class disparate Nepal, A young man navigates the blurred lines of crime, justice, freedom, and personal redemption as he contemplates and dreams over killing a selfish individual for the greater good.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  },
+  {
+    "title": "Impostor Syndrome",
+    "slug": "new-portfolio-item-5",
+    "image": "portfolio-new-portfolio-item-5.png",
+    "description": "A commercial food stylist arrives to work on set, only to find that she must confront a sinister yet strangely familiar stylist who has taken her place.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  },
+  {
+    "title": "Girls, But Boys",
+    "slug": "county-rescue-2bw8z-tl559",
+    "image": "portfolio-county-rescue-2bw8z-tl559.png",
+    "description": "Girls, but Boys- is about what happens when a failing relationship clashes with a group of friends, and the poor communication, modern dating pressure, and fear of missing out that brought it together are what makes it come undone. Jack and Lena are on different ends of a high stakes, casual relationship that hinges on the pressures of what matters to...who? They aren’t exactly sure. Jack attempts to navigate his morals while not letting anyone down, in search of the modern utopia – a neverland in which he has no ethical or logistical dilemmas – while Lena waits for Jack to commit to a relationship he wants even though his actions say otherwise. In both instances and together, the would-be couple and their circle are waiting for nothing to happen.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  },
+  {
+    "title": "Art Heist",
+    "slug": "art-heist",
+    "image": "portfolio-art-heist.png",
+    "description": "Two coworkers prank their office by replacing the artwork, but their harmless joke soon spirals into something bigger.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  },
+  {
+    "title": "5 Minutes by Car",
+    "slug": "new-portfolio-item-2",
+    "image": "portfolio-new-portfolio-item-2.png",
+    "description": "5 Minutes by Car follows Allan, a student working a quiet night shift as a line cook, where a simple act of kindness sends him down an unexpected road.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "5 Minutes by Car"
+  },
+  {
+    "title": "Rockabye Birdy",
+    "slug": "rockabye-birdy",
+    "image": "portfolio-rockabye-birdy.png",
+    "description": "Upon receiving a letter from the boy she gave up for adoption years ago, a sheltered young woman embarks on a journey from her rural town to reconnect with her child",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  },
+  {
+    "title": "Salvation is Within You!",
+    "slug": "county-rescue-2bw8z-tl559-ffs93",
+    "image": "portfolio-county-rescue-2bw8z-tl559-ffs93.png",
+    "description": "Set in the run-up to the infamous Sacco and Vanzetti Trial of the 1920s, Salvation is Within You! is a narrative historical thriller which follows two brothers down the path of political radicalism - just as the government tightens its grip on their Italian immigrant community.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Salvation is Within You!"
+  },
+  {
+    "title": "Swallowtails",
+    "slug": "swallowtails",
+    "image": "portfolio-swallowtails.png",
+    "description": "Swallowtails unfolds over the course of a late night outside a 1983 prom, following two cousins drifting at the edges of the same moment. Each is reeling from their own version of rejection and holding very different views on life, but as the night stretches on, distance gives way to understanding. When one is confronted with her boyfriend’s betrayal, she finds the courage to stand up for herself—transforming both her sense of self and their relationship.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    },
+    "lead": "Swallowtails"
+  },
+  {
+    "title": "Like Clockwork",
+    "slug": "new-portfolio-item",
+    "image": "portfolio-new-portfolio-item.png",
+    "description": "In a contemporary retelling of 'Alice in Wonderland' set against the backdrop of bustling New York City, “Like Clockwork” follows grad student Ali grapples with a life-changing job offer and the unexpected union of an old fling.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  },
+  {
+    "title": "Sornyak",
+    "slug": "new-portfolio-item-1",
+    "image": "portfolio-new-portfolio-item-1.png",
+    "description": "A struggling father’s crumbling sense of identity slowly poisons the home he’s trying to hold together.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  },
+  {
+    "title": "Fractured Paradise",
+    "slug": "new-portfolio-item-3",
+    "image": "portfolio-new-portfolio-item-3.png",
+    "description": "A young New York City couple get into an emotional argument when one of them wants to move away.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  },
+  {
+    "title": "Red Delicious",
+    "slug": "new-portfolio-item-4",
+    "image": "portfolio-new-portfolio-item-4.png",
+    "description": "A woman is pushed to desperate measures as she struggles to replace her defective organ transplant before it's too late.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  },
+  {
+    "title": "May Be Unholy",
+    "slug": "new-portfolio-item-3-ys6h7",
+    "image": "portfolio-new-portfolio-item-3-ys6h7.png",
+    "description": "Upon the arrival of her new roommate, a pragmatic, no-nonsense atheist is briefly convinced that witches are real.",
+    "video": {
+      "provider": "youtube",
+      "id": "fsGMneKuoKM"
+    }
+  }
+]

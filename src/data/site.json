@@ -1,0 +1,67 @@
+{
+  "brand": "Interval Audio",
+  "tagline": [
+    "fill with sound the",
+    "spaces between"
+  ],
+  "subhead": "Film and Media Audio Services by Eli Akselrod",
+  "heroImage": "hero.jpg",
+  "services": [
+    {
+      "title": "Full-Service Audio Post Production",
+      "detail": "Dialogue Editing, SFX Editing/Sound Design, Re-Recording Mix"
+    },
+    {
+      "title": "Supervising Sound Supervision",
+      "detail": "Creative Direction, Department Oversight, Spotting Sessions, Pre-Dub and Mix Prep, Mix Attendance"
+    },
+    {
+      "title": "Sound Editing",
+      "detail": "Dialogue Editing, SFX Editing, or Sound Design in focused specialized role"
+    }
+  ],
+  "about": {
+    "heading": "Hi, I’m Eli Akselrod.",
+    "paragraphs": [
+      "I’m a New York based audio creative working across documentary, television, and narrative film. My background is in sound design and mixing, but my work has grown into a broader approach to post production, shaping the emotional rhythm of a piece as much as its technical finish.",
+      "I’ve worked on projects ranging from independent films to releases on HBO, Netflix, and Adult Swim, and have been recognized with an Emmy nomination and two MPSE Golden Reel nominations for sound editing.",
+      "I’m drawn to stories that feel grounded and human. A lot of my work lives in the details, cleaning and shaping dialogue so it feels natural, building environments that support rather than distract, and finding a rhythm that lets a scene breathe.",
+      "I care deeply about the experience of collaboration. Clear communication, thoughtful pacing, and a shared understanding of the story are just as important to me as the final mix.",
+      "At the core of it, I’m interested in the space between things, the moments that aren’t always obvious, but are felt."
+    ],
+    "images": [
+      "about-1.jpg",
+      "about-2.jpg",
+      "about-3.jpg"
+    ]
+  },
+  "contact": {
+    "heading": "What’s your story?",
+    "email": "eli.intervalaudio@gmail.com"
+  },
+  "footer": {
+    "brand": "Interval Audio",
+    "subhead": "Film and Media Audio Services by Eli Akselrod",
+    "location": "Brooklyn, NY",
+    "email": "eli.intervalaudio@gmail.com"
+  },
+  "social": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm14485197/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnaxxsZ5lFIg7doQM1lPBowU4G3ICDgn9UUO2vEzW5xwuxDJrDuQxbkbnyE7g_aem_9B-y6N9XM8ur9u8Vod4q0w"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/interval.audio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtu.be/fsGMneKuoKM?si=gLQ_z3iItxJRZf06"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/eli-akselrod/"
+    }
+  ],
+  "favicon": "/favicon.ico"
+}

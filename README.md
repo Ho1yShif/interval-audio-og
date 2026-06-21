@@ -1,2 +1,69 @@
-# interval-audio
-Code for interval audio website
+# Interval Audio
+
+A self-hosted static rebuild of the Interval Audio portfolio site (film & media
+audio services by Eli Akselrod), migrated off Squarespace onto plain
+**React + Vite** with fully self-hosted, optimized assets and **no Squarespace
+runtime dependency**.
+
+## Stack
+
+- **Vite + React** with [`vite-react-ssg`](https://github.com/daydreamer-riri/vite-react-ssg)
+  — every route (including all portfolio item pages) is pre-rendered to static HTML at build time.
+- **react-router-dom** for routing.
+- Self-hosted fonts (Young Serif + Bitter) and locally optimized images
+  (responsive AVIF / WebP / JPEG via `sharp`).
+
+## Develop
+
+```bash
+npm install
+npm run dev        # local dev server
+npm run build      # static build -> dist/
+npm run preview    # serve the built dist/
+```
+
+## Content & assets
+
+Content and images were captured from the live site into `src/data/` and
+`assets/originals/`, then optimized into `public/img/`. To refresh from source:
+
+```bash
+npm run extract    # re-pull content + originals  (scripts/extract-content.mjs)
+npm run optimize   # regenerate responsive images  (scripts/optimize-images.mjs)
+```
+
+- `src/data/site.json` — homepage, about, contact, footer, services, social.
+- `src/data/portfolio.json` — all portfolio items (title, slug, image, description, video).
+- `src/data/images.json` — generated responsive-image manifest (do not edit by hand).
+
+## Structure
+
+```
+src/
+  components/   Header, Footer, Layout, Image, Reveal, PortfolioCard, SocialIcons
+  pages/        Home, About, Contact, Portfolio, PortfolioItem
+  data/         extracted content + image manifest
+  styles/       global tokens + base styles
+scripts/        one-time extraction + image optimization
+public/         fonts, optimized images, favicon
+```
+
+Routes are defined in `src/routes.jsx`. Note the About page is served at
+**`/about-2`** (not `/about`) — the slug carried over from the original site and
+the nav links to it intentionally.
+
+## Deploy
+
+The build outputs a fully static `dist/` with a real HTML file per route — deploy
+to any static host (Render Static Site, Cloudflare Pages, Netlify, GitHub Pages).
+
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+
+## Notes
+
+- The contact form composes a `mailto:` to the studio address (no backend). Swap
+  the submit handler in `src/pages/Contact.jsx` for Formspree / Netlify Forms if a
+  hosted handler is preferred.
+- Portfolio trailers are embedded via `youtube-nocookie.com` iframes — the only
+  external runtime requests, matching the original site.

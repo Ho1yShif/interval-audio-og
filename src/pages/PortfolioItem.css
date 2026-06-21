@@ -1,0 +1,50 @@
+.pf-item {
+  padding-top: calc(var(--header-h) + clamp(2.5rem, 6vw, 5rem));
+}
+.pf-item .container { max-width: 1100px; }
+
+/* horizontal rule above the description (matches live) */
+.pf-item__desc {
+  border-top: 1px solid hsl(60 3% 17% / 0.35);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  line-height: 1.5;
+}
+.pf-item__desc strong { font-weight: 700; }
+
+/* Previous / Next pagination */
+.pf-item__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin-top: clamp(3.5rem, 8vw, 6rem);
+}
+.pf-item__link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text);
+}
+.pf-item__link--next { margin-left: auto; }
+.pf-item__caret { width: 9px; height: 16px; flex: none; }
+
+/* the "Previous"/"Next" word is present for a11y but visually hidden */
+.pf-item__nav-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+.pf-item__link h2 {
+  font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+  line-height: 1.1;
+  transition: color 0.3s var(--ease);
+}
+.pf-item__link:hover h2 { color: var(--accent-dark); }
+
+@media (max-width: 600px) {
+  .pf-item__nav { flex-direction: column; }
+  .pf-item__link--next { margin-left: 0; flex-direction: row-reverse; justify-content: flex-end; }
+}
