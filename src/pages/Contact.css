@@ -31,10 +31,35 @@
   font-size: 0.95rem;
   color: var(--cream);
 }
-.contact__form span em {
-  font-style: normal;
+
+/* single "All fields required" note in place of per-field (required) tags */
+.contact__required {
+  margin: 0;
   font-size: 0.8rem;
+  letter-spacing: 0.04em;
   opacity: 0.7;
+}
+
+/* off-screen honeypot — present in the DOM for bots, invisible to people */
+.contact__honeypot {
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact__thanks {
+  text-align: center;
+  max-width: 880px;
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  color: var(--cream);
+}
+.contact__error {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--accent-light);
 }
 
 .contact__name {
@@ -93,6 +118,7 @@
 }
 /* no motion on hover — just tint the label the same yellow as the input fields */
 .contact__submit:hover { color: var(--accent-dark); }
+.contact__submit:disabled { opacity: 0.6; cursor: default; }
 
 /* curved divider into the yellow footer */
 .contact__divider {

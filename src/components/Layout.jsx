@@ -1,15 +1,17 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 
 export default function Layout() {
-  const { pathname } = useLocation();
-
-  // scroll to top on navigation
+  // If the page loads with a hash (e.g. someone shares /#contact), jump to it
+  // once the content has rendered.
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const { hash } = window.location;
+    if (!hash) return;
+    const el = document.querySelector(hash);
+    if (el) el.scrollIntoView();
+  }, []);
 
   return (
     <>

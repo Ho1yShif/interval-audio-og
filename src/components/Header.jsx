@@ -1,20 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Header.css";
 
 const NAV = [
-  { to: "/", label: "Home", end: true },
-  { to: "/portfolio", label: "Portfolio" },
-  { to: "/about-2", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { href: "#home", label: "Home" },
+  { href: "#portfolio", label: "Portfolio" },
+  { href: "#about", label: "About" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
-
-  // close the mobile menu on route change
-  useEffect(() => setOpen(false), [location.pathname]);
 
   // lock body scroll while the mobile menu is open
   useEffect(() => {
@@ -22,28 +17,22 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  // pages whose top section (behind the fixed header) is dark — the logo/nav
-  // float in gold over them, like the home hero. /portfolio opens with an
-  // upside-down copy of the hero whose dark-olive top blends into the header.
-  const darkTop = ["/", "/portfolio", "/about-2", "/contact"].includes(location.pathname);
+  const close = () => setOpen(false);
 
+  // The gold logo/nav float over the page at every scroll position (a soft
+  // text-shadow keeps them legible over the lighter Services band).
   return (
-    <header className={`site-header ${darkTop ? "is-dark-top" : ""} ${open ? "is-open" : ""}`}>
+    <header className={`site-header is-dark-top ${open ? "is-open" : ""}`}>
       <div className="site-header__inner">
-        <Link to="/" className="site-header__logo" aria-label="Interval Audio home">
+        <a href="#home" className="site-header__logo" aria-label="Interval Audio home" onClick={close}>
           Interval Audio
-        </Link>
+        </a>
 
         <nav className="site-header__nav" aria-label="Primary">
           {NAV.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              end={item.end}
-              className={({ isActive }) => `link-underline ${isActive ? "is-active" : ""}`}
-            >
+            <a key={item.href} href={item.href} className="link-underline" onClick={close}>
               {item.label}
-            </NavLink>
+            </a>
           ))}
         </nav>
 
@@ -60,7 +49,7 @@ export default function Header() {
       <div className="site-header__overlay" aria-hidden={!open}>
         <nav aria-label="Mobile">
           {NAV.map((item) => (
-            <Link key={item.to} to={item.to}>{item.label}</Link>
+            <a key={item.href} href={item.href} onClick={close}>{item.label}</a>
           ))}
         </nav>
       </div>

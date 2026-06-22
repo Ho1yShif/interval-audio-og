@@ -6,10 +6,10 @@ import "./About.css";
 export default function About() {
   const { about } = site;
   return (
-    <section className="section about">
+    <section className="section about" id="about">
       <div className="container about__grid">
         <div className="about__text">
-          <Reveal as="h1">{about.heading}</Reveal>
+          <Reveal as="h2">{about.heading}</Reveal>
           {about.paragraphs.map((p, i) => (
             <Reveal as="p" key={i} delay={i * 60}>{p}</Reveal>
           ))}

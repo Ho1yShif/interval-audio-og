@@ -2,6 +2,9 @@ import { useState } from "react";
 import site from "../data/site.json";
 import Image from "../components/Image.jsx";
 import Reveal from "../components/Reveal.jsx";
+import Portfolio from "./Portfolio.jsx";
+import About from "./About.jsx";
+import Contact from "./Contact.jsx";
 import "./Home.css";
 
 function Chevron() {
@@ -19,13 +22,16 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero">
+      <section className="hero" id="home">
         <div className="hero__frame">
           <div className="hero__media">
             <Image name={site.heroImage} alt="" sizes="100vw" eager />
           </div>
           <div className="hero__scrim" />
           <div className="hero__grain" aria-hidden="true" />
+          {/* cinematic letterbox bars that retract on load to reveal the hero */}
+          <div className="hero__bar hero__bar--top" aria-hidden="true" />
+          <div className="hero__bar hero__bar--bottom" aria-hidden="true" />
           <div className="hero__content">
             <h1 className="hero__title">
               {site.tagline.map((line, i) => (
@@ -37,7 +43,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="services">
+      <section className="services" id="services">
         <div className="services__inner">
           <Reveal as="h2" className="services__heading">Services</Reveal>
           <div className="services__list">
@@ -60,6 +66,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Portfolio />
+      <About />
+      <Contact />
     </>
   );
 }

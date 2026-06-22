@@ -1,10 +1,17 @@
 .site-header {
-  position: absolute;
+  position: fixed;
   inset: 0 0 auto 0;
   z-index: 100;
   height: var(--header-h);
   display: flex;
   align-items: flex-start;
+  /* carry the hero's olive backdrop frozen in place: the fixed header always
+     paints the top slice of the same gradient, so it blends seamlessly with the
+     hero at the top and stays a consistent bar as the page scrolls */
+  background: var(--hero-grad);
+  background-size: 100% 106svh;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 .site-header__inner {
@@ -37,8 +44,8 @@
 .site-header__nav a { color: var(--text); }
 .site-header__nav .is-active::after { transform: scaleX(1); }
 
-/* gold branding floats over dark top sections (home hero, About, Contact);
-   reverts to dark text on light-topped pages */
+/* gold branding sits on the header's own dark olive backdrop at every scroll
+   position, so it stays legible without any extra treatment */
 .site-header.is-dark-top .site-header__logo,
 .site-header.is-dark-top .site-header__nav a {
   color: var(--accent-dark);

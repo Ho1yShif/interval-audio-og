@@ -3,8 +3,8 @@
   padding-block: clamp(3rem, 6vw, 5rem);
 }
 .site-footer__inner {
-  /* spread the footer across the full width, matching the services band */
-  max-width: 2040px;
+  /* centered content width, matching the services band */
+  max-width: 1500px;
   width: 100%;
   margin-inline: auto;
   padding-inline: clamp(2.5rem, 5vw, 4.5rem);
@@ -64,6 +64,17 @@
 }
 /* same glyphs as the original (Squarespace sprite), inside the circle */
 .site-footer__social svg { width: 21px; height: 21px; }
+
+/* copyright line sits below the main footer row */
+.site-footer__copyright {
+  max-width: 1500px;
+  width: 100%;
+  margin: clamp(2rem, 4vw, 3rem) auto 0;
+  padding-inline: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--text-soft);
+}
 
 @media (max-width: 860px) {
   .site-footer__inner { flex-direction: column; align-items: flex-start; }

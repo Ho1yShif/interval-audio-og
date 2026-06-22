@@ -35,6 +35,10 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <p className="site-footer__copyright">
+        © {new Date().getFullYear()} {footer.brand}
+      </p>
     </footer>
   );
 }

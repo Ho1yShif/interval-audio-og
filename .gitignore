@@ -5,3 +5,8 @@ dist
 *.log
 .claude
 .playwright-cli
+
+# local env (keep .env.example tracked)
+.env
+.env.local
+.env.*.local

@@ -4,14 +4,15 @@
   padding-top: calc(var(--header-h) + clamp(2rem, 5vw, 4rem));
 }
 
-/* wider than the default container so images read large and text wraps broadly */
+/* a touch wider than the default container so images read large */
 .about .container {
-  max-width: min(1480px, 94vw);
+  max-width: min(1320px, 94vw);
 }
 
 .about__grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  /* give the gallery more room so the images read larger */
+  grid-template-columns: 1.4fr 1fr;
   gap: clamp(2.5rem, 6vw, 6rem);
   align-items: start;
 }
@@ -20,7 +21,7 @@
 .about__gallery { grid-column: 1; grid-row: 1; }
 .about__text { grid-column: 2; grid-row: 1; }
 
-.about__text h1 {
+.about__text h2 {
   font-size: clamp(2rem, 3.4vw, 2.85rem);
   margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
   white-space: nowrap;
@@ -34,11 +35,14 @@
   color: var(--cream);
 }
 
-/* big image on top, two smaller images side-by-side below */
+/* big image on top, two below with the right one slightly larger (matches the
+   original's asymmetry) */
 .about__gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.18fr;
   gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  /* let the two bottom images keep their natural heights (right runs lower) */
+  align-items: start;
   position: sticky;
   top: calc(var(--header-h) + 1.5rem);
 }
@@ -54,5 +58,5 @@
   .about__gallery, .about__text { grid-column: 1; }
   .about__gallery { grid-row: 2; position: static; }
   .about__text { grid-row: 1; }
-  .about__text h1 { white-space: normal; }
+  .about__text h2 { white-space: normal; }
 }
