@@ -1,5 +1,20 @@
 import manifest from "../data/images.json";
 
+// Manifest paths are root-absolute ("/img/..."), but the site is served from a
+// project subpath ("/interval-audio/"). Vite rewrites asset URLs in HTML/CSS,
+// not these runtime JSON strings, so prefix them with BASE_URL ourselves.
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+const withBase = (url) => `${BASE}${url}`;
+// A srcset is "url 400w, url 800w, ..." — prefix each url, keep its descriptor.
+const srcsetWithBase = (srcset) =>
+  srcset
+    .split(",")
+    .map((entry) => {
+      const [url, ...descriptor] = entry.trim().split(/\s+/);
+      return [withBase(url), ...descriptor].join(" ");
+    })
+    .join(", ");
+
 /**
  * Responsive <picture> backed by the build-time image manifest.
  * Serves AVIF -> WebP -> JPEG fallback with srcset + lazy loading.
@@ -10,14 +25,14 @@ export default function Image({ name, alt = "", sizes = "100vw", className, eage
   const m = manifest[name];
   if (!m) {
     // graceful fallback if an asset is missing from the manifest
-    return <img src={`/img/${name}`} alt={alt} className={className} loading="lazy" style={style} />;
+    return <img src={withBase(`/img/${name}`)} alt={alt} className={className} loading="lazy" style={style} />;
   }
   return (
     <picture>
-      <source type="image/avif" srcSet={m.srcset.avif} sizes={sizes} />
-      <source type="image/webp" srcSet={m.srcset.webp} sizes={sizes} />
+      <source type="image/avif" srcSet={srcsetWithBase(m.srcset.avif)} sizes={sizes} />
+      <source type="image/webp" srcSet={srcsetWithBase(m.srcset.webp)} sizes={sizes} />
       <img
-        src={m.fallback}
+        src={withBase(m.fallback)}
         alt={alt}
         width={m.width}
         height={m.height}
