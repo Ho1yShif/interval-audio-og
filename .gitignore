@@ -1,0 +1,12 @@
+node_modules
+dist
+.vite-react-ssg-temp
+.DS_Store
+*.log
+.claude
+.playwright-cli
+
+# local env (keep .env.example tracked)
+.env
+.env.local
+.env.*.local

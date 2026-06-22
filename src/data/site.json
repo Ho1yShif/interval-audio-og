@@ -1,0 +1,74 @@
+{
+  "brand": "Interval Audio",
+  "tagline": [
+    "fill the space between",
+    "with sound"
+  ],
+  "subhead": "Film and Media Audio Services by Eli Akselrod",
+  "heroImage": "hero.jpg",
+  "services": [
+    {
+      "title": "Full-Service Audio Post-Production",
+      "detail": "Dialogue editing, sound effects and sound design, and the final re-recording mix, all under one roof."
+    },
+    {
+      "title": "Sound Supervision",
+      "detail": "Creative direction, department oversight, spotting sessions, pre-dub and mix prep, and mix attendance."
+    },
+    {
+      "title": "Sound Editing",
+      "detail": "Dialogue editing, sound effects, and specialty sound design."
+    }
+  ],
+  "about": {
+    "heading": "Hi, I’m Eli Akselrod.",
+    "paragraphs": [
+      "I’m a New York-based audio creative working across documentary, television, and narrative film. My background is in sound design and mixing, and over time my work has grown into something broader, shaping the emotional rhythm of a piece as much as its technical finish.",
+      "I’ve been lucky to work on everything from small independent films to releases on HBO, Netflix, and Adult Swim, and I’ve been honored with an Emmy nomination and two MPSE Golden Reel nominations for sound editing.",
+      "What I love most are stories that feel grounded and human. A lot of my work lives in the small things: cleaning and shaping dialogue so it feels natural, building environments that support a scene instead of distracting from it, and finding the rhythm that lets a moment breathe.",
+      "Collaboration matters just as much to me as the mix itself. Clear communication, thoughtful pacing, and a shared sense of the story are the things that make the work sing.",
+      "At the heart of it, I’m fascinated by the space between things, the quiet moments that aren’t always obvious but are deeply felt."
+    ],
+    "images": [
+      "about-1.jpg",
+      "about-2.jpg",
+      "about-3.jpg"
+    ]
+  },
+  "portfolio": {
+    "intro": [
+      "I’m a New York-based audio creative working across documentary, television, and narrative film.",
+      "My work has lived everywhere from small independent projects to releases on HBO, Netflix, and Adult Swim, always shaped by a love of subtlety, rhythm, and the space between moments.",
+      "I’ve been honored with an Emmy nomination and two Golden Reel nominations for sound editing, and I’m drawn most to stories that feel intimate, immersive, and quietly powerful."
+    ]
+  },
+  "contact": {
+    "heading": "What’s your story?",
+    "email": "eli.intervalaudio@gmail.com"
+  },
+  "footer": {
+    "brand": "Interval Audio",
+    "subhead": "Film and Media Audio Services by Eli Akselrod",
+    "location": "Brooklyn, NY",
+    "email": "eli.intervalaudio@gmail.com"
+  },
+  "social": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm14485197/"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/interval.audio"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtu.be/fsGMneKuoKM?si=gLQ_z3iItxJRZf06"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/eli-akselrod/"
+    }
+  ],
+  "favicon": "/favicon.ico"
+}
