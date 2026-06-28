@@ -219,3 +219,19 @@
 @media (max-width: 820px) {
   .service__title { font-size: clamp(1.35rem, 5vw, 2rem); }
 }
+
+/* ── Mobile polish ────────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  /* full-bleed the sky photo: no olive gradient frame around it on mobile */
+  .hero { padding: 0; }
+  /* keep the centered title/subhead off the screen edges now that .hero has no
+     side padding; sit the title closer to center on tall, narrow viewports */
+  .hero__content {
+    padding-inline: clamp(1.25rem, 5vw, 2rem);
+    transform: translateY(-2vh);
+  }
+  /* the desktop 1.5 line-height is loose for the larger wrapped lines on a phone */
+  .hero__title { line-height: 1.25; }
+  /* trim the gold band so it isn't excessively tall on phones */
+  .services { padding-block: clamp(3.5rem, 12vw, 5rem); }
+}

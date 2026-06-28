@@ -46,8 +46,14 @@
   margin-inline: auto;
   text-align: center;
   color: var(--text);
-  /* sit the copy lower, over the bright water band */
-  transform: translateY(3.75rem);
+}
+/* Desktop: settle the intro copy lower, over the bright water band. The element
+   carries the global `.reveal` class, whose `.is-visible` rule resets transform
+   to none — so these must out-specify it (3 classes) and start a touch lower so
+   the fade still settles upward into place. */
+@media (min-width: 601px) {
+  .portfolio-hero__intro.reveal { transform: translateY(calc(5.25rem + 24px)); }
+  .portfolio-hero__intro.reveal.is-visible { transform: translateY(5.25rem); }
 }
 .portfolio-hero__intro p {
   margin: 0 0 1.1rem;
@@ -256,9 +262,14 @@
 @media (max-width: 1100px) { .pf-row { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) {
   .pf-row { grid-template-columns: 1fr; }
-  /* on touch, always show the title since there's no hover */
-  .pf-card__title { opacity: 1; transform: none; }
-  .pf-card__overlay { align-items: flex-end; background: linear-gradient(to top, hsl(60 3% 12% / 0.55), transparent 55%); }
+  /* on touch there's no hover, so drop the poster titles + their scrim entirely */
+  .pf-card__title { display: none; }
+  .pf-card__overlay { background: none; }
+
+  /* the flipped sky photo is too short for the long intro copy on a phone, so
+     swap it for a solid gold band matching the Services section above */
+  .portfolio-hero { background: var(--accent); min-height: auto; }
+  .portfolio-hero__media { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -111,4 +111,44 @@
 @media (max-width: 720px) {
   .site-header__nav { display: none; }
   .site-header__burger { display: flex; }
+
+  /* keep the bar within the viewport: the desktop 110% width + large gutter
+     would overflow on a phone and push the burger past the right edge */
+  .site-header__inner {
+    width: 100%;
+    padding-inline: clamp(1.25rem, 5vw, 2rem);
+    padding-top: 1.25rem;
+    /* with the nav hidden it drops out of grid flow, so the burger would land
+       in the middle `auto` column; a 2-column track keeps it pinned right */
+    grid-template-columns: 1fr auto;
+    /* keep the logo + burger above the open overlay so the ✕ stays visible and
+       tappable to close (the overlay is a sibling at z-index 90) */
+    position: relative;
+    z-index: 95;
+  }
+
+  /* menu on the right: keep the full-screen cream overlay, but pin the links
+     flush to the right edge (vertically centered) */
+  .site-header__overlay {
+    justify-content: flex-end;
+    padding-inline: clamp(1.5rem, 8vw, 3rem);
+  }
+  .site-header__overlay nav {
+    align-items: flex-end;
+    text-align: right;
+    /* settle in from the right as the overlay fades up */
+    transform: translateX(18px);
+    transition: transform 0.4s var(--ease);
+  }
+  .site-header.is-open .site-header__overlay nav {
+    transform: none;
+  }
+}
+
+@media (max-width: 720px) and (prefers-reduced-motion: reduce) {
+  .site-header__overlay nav,
+  .site-header.is-open .site-header__overlay nav {
+    transform: none;
+    transition: none;
+  }
 }
